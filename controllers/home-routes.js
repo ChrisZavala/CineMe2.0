@@ -55,9 +55,6 @@ async function createsContent(req, res, type, id, ) {
       console.log('video key: ',videoData.data.results);
         let dataQuery = await Promise.all([
             getContentData(type, id),
-            
-            // youtube(id),
-            
             Poll.findAll({
                 where: {
                   content_type: type,
