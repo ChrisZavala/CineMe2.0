@@ -83,8 +83,8 @@ function youtube(id) {
     var apiUrl = `https://api.themoviedb.org/3/movie/${id}/videos?api_key=${process.env.apiKEY}`;
     console.log(apiUrl);
     return axios(apiUrl);
-     
-}
     
+
+} 
 //export time 
 module.exports = { searchContent, getContentData, getTopData, getPopData, createContent,getActionData, getComedyData, getRomanceData, youtube  }

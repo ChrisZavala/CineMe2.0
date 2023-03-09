@@ -2,6 +2,10 @@
 <section class="hero is-large content-hero" style="background: url('{{content.backdrop}}');">
     {{!-- <div class="overlay is-overlay"></div> --}}
     <div class="hero-body"></div>
+    <div id="trailer">
+    <iframe width="420" height="345" src="http://www.youtube.com/embed/{{key}}">
+        </iframe>
+        </div>
 </section>
 
 {{!-- content-info section --}}
@@ -14,8 +18,10 @@
             {{!-- dropdown button --}}
             <div class="control is-expanded cm-margin">
                 <div class="dropdown watchlist-dropdown-menu">
+                    {{!-- <button onClick="showOrHide()"class="add-list-btn button is-success is-fullwidth" 
+                        type="button">Play Trailer</button> --}}
                     <div class="dropdown-trigger">
-                         <button id="buttontr" class="button play-video center-max-size" 
+                         <button onclick="showOrHide()" class="button play-video center-max-size" 
                         type="button">Play Trailer</button>
                         <button id="add-list-dropdown-btn" class="add-list-btn button is-success is-fullwidth"
                             aria-haspopup="true" aria-controls="dropdown-menu">
@@ -65,14 +71,8 @@
         <h2 id="content-title" class="title is-size-4-touch is-size-2 has-text-white mb-0 py-4">
             {{content.title}}
         </h2>
-        <iframe width="420" height="345" src="http://www.youtube.com/embed/{{key}}">
-        </iframe>
-        {{!-- <div id="movies-searchable"></div>
-        <div id="movies-container"></div> --}}
-        {{!-- <p class="has-text-weight-semibold">
-            Type:
-            <span class="is-uppercase has-text-weight-normal">{{content.type}}</span>
-        </p> --}}
+        
+    
         <p id="release" class="has-text-weight-semibold" id="release">
             Release:
             <span class="has-text-weight-normal release-date">{{content.release}}</span>
@@ -132,7 +132,7 @@
 <script src="/js/content-page-comment.js"></script>
 <script src="/js/poll.js"></script>
 <script src="../utils/movieApi.js"></script>
-{{!-- <script src="/js/trailer.js"></script> --}}
+<script src="/js/trailer.js"></script>
 
 {{else}}
 <script src="/js/content-page-loggedout.js"></script>
