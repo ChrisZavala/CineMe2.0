@@ -79,10 +79,8 @@ SOFTWARE.
   ## Test
  The user can test the functicallity of this application for their use. Please report any issues or bugs to make this an even better user experience.  
 
-  ## Video Link inserted here:
-
- 
-  ## Screenshots:
+  ## Live Site
+  [Click to see the live site](https://cineme-2.herokuapp.com/)
 
 
 
